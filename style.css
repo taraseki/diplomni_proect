@@ -1,0 +1,126 @@
+@import url('https://fonts.googleapis.com/css2?family=Fira+Code:wght@400&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Montserrat', sans-serif;
+    background-color: #FFFFFF;
+}
+
+.header {
+    width: 100%;
+    background: white;
+    border-bottom: 1px solid #0F2A1D;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+}
+
+.header__container {
+    max-width: 1200px;
+    height: 80px;
+    margin: 0 auto;
+    padding: 0 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: nowrap;
+}
+
+.logo {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 2px;
+    text-decoration: none;  
+    line-height: 1.1;
+    flex-shrink: 0;
+    white-space: nowrap;
+}
+
+.logo__beauty {
+    font-family: 'Playfair Display', serif;
+    font-style: italic;
+    font-weight: 500;
+    font-size: 24px;
+    color: #0F2A1D;
+    margin-bottom: -1px;
+}
+
+.logo__lime {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 700;
+    font-size: 24px;
+    color: #0F2A1D;
+    margin-bottom: -2px;
+}
+
+.logo__subtitle {
+    font-family: 'Fira Code', 'Courier New', monospace;
+    font-weight: 400;
+    font-size: 16px;
+    color: #0F2A1D;
+    letter-spacing: 0.3px;
+    opacity: 0.8;
+}
+
+.nav__list {
+    display: flex;
+    gap: 90px;
+    list-style: none;
+    flex-wrap: nowrap;
+    margin: 0;
+}
+
+.nav__link {
+    font-family: 'Fira Code', monospace;
+    font-size: 22px;
+    font-weight: 400;
+    color: #0F2A1D;
+    text-decoration: none;
+    white-space: nowrap;
+}
+
+.contacts {
+    text-align: right;
+    flex-shrink: 0;
+    white-space: nowrap;
+}
+
+.contacts__phone {
+    font-family: 'Inter', sans-serif;
+    font-size: 13px;
+    font-weight: 400;
+    color: #0F2A1D;
+}
+
+.contacts__city {
+    font-family: 'Inter', sans-serif;
+    font-size: 13px;
+    font-weight: 400;
+    color: #0F2A1D;
+    margin-top: 2px;
+}
+
+/* ----- Адаптивность ----- */
+@media (max-width: 768px) {
+    .header__container {
+        height: 60px;
+        padding: 0 16px;
+    }
+    .logo__beauty,
+    .logo__lime {
+        font-size: 18px;
+    }
+    .nav__list {
+        gap: 16px;
+    }
+    .nav__link {
+        font-size: 14px;
+    }
+}
