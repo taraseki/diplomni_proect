@@ -402,3 +402,23 @@ body {
     text-align: center;
     margin: 0;
 }
+
+.price {
+    padding-top: 0px;
+    margin-top: -40px;
+}
+
+.price__title {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 700;
+    font-size: 42px;
+    color: #0F2A1D;
+    margin: 0;
+    padding-left: 60px;
+    text-align: left;
+}
+
+#uslugi, #price {
+    scroll-margin-top: 100px;
+}
+
