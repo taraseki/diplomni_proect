@@ -706,3 +706,94 @@ body {
     color: rgba(255, 255, 255, 0.6);
     margin: 5px 0;
 }
+
+.dark-theme {
+    background-color: #1a2a22;
+}
+
+.dark-theme .header {
+    background-color: #0F2A1D;
+    border-bottom-color: #ffffff;
+}
+
+.dark-theme .logo__beauty,
+.dark-theme .logo__lime,
+.dark-theme .logo__subtitle,
+.dark-theme .nav__link,
+.dark-theme .contacts__phone,
+.dark-theme .contacts__city,
+.dark-theme .services__title,
+.dark-theme .services__text,
+.dark-theme .services__name,
+.dark-theme .services__desc,
+.dark-theme .services__title-left,
+.dark-theme .services__desc-left,
+.dark-theme .services__name-third,
+.dark-theme .services__desc-third,
+.dark-theme .info-center__title,
+.dark-theme .price__title,
+.dark-theme .price__subtitle,
+.dark-theme .price__subtitle2,
+.dark-theme .price__subtitle3,
+.dark-theme .price__subtitle-second,
+.dark-theme .price__cell,
+.dark-theme .contact__title,
+.dark-theme .contact__address,
+.dark-theme .contact__subtitle,
+.dark-theme .contact__phone,
+.dark-theme .contact__social,
+.dark-theme .contact__time,
+.dark-theme .footer__beauty,
+.dark-theme .footer__lime,
+.dark-theme .footer__subtitle,
+.dark-theme .footer__link,
+.dark-theme .footer__city,
+.dark-theme .footer__phone,
+.dark-theme .footer__address,
+.dark-theme .footer__copyright p {
+    color: #e0e0e0;
+}
+
+.dark-theme .price__row {
+    border-bottom-color: rgba(255, 255, 255, 0.2);
+}
+
+.dark-theme .footer {
+    background-color: #0F2A1D;
+}
+
+.dark-theme .services__btn,
+.dark-theme .services__button,
+.dark-theme .services__btn-third {
+    background-color: #0F2A1D;
+    color: #FFFFFF;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+.dark-theme .services__btn:hover,
+.dark-theme .services__button:hover,
+.dark-theme .services__btn-third:hover {
+    opacity: 0.8;
+}
+
+.theme-toggle {
+    background-color: #0F2A1D;
+    color: white;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 600;
+    font-size: 14px;
+    padding: 8px 16px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: opacity 0.2s;
+}
+
+.theme-toggle:hover {
+    opacity: 0.8;
+}
+
+.dark-theme .theme-toggle {
+    background-color: #ffffff;
+    color: #0F2A1D;
+}
