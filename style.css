@@ -797,3 +797,16 @@ body {
     background-color: #ffffff;
     color: #0F2A1D;
 }
+
+.contact__map {
+    width: 100%;
+    max-width: 400px;
+    border-radius: 16px;
+    overflow: hidden;
+}
+
+.contact__map iframe {
+    width: 100%;
+    height: 300px;
+    display: block;
+}
