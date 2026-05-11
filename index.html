@@ -4,230 +4,171 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Beauty Lime — Салон красоты</title>
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Playfair+Display:ital@0;1&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&family=Playfair+Display:ital@0;1&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@400&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400&display=swap" rel="stylesheet"> 
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <!-- хедер комп бел -->
-    <header class="header">
-        <div class="container header__container">
-            <!-- лого -->
-            <a href="#" class="logo">
-                <span class="logo__beauty">Бьюти</span>
-                <span class="logo__lime">Лайм</span>
-                <span class="logo__subtitle">салон красоты</span>
-            </a>
-            <!-- навигация по визитке -->
-            <nav class="nav">
-    <ul class="nav__list">
-        <li class="nav__item"><a href="#uslugi" class="nav__link">Услуги</a></li>
-        <li class="nav__item"><a href="#price" class="nav__link">Прайс</a></li>
-        <li class="nav__item"><a href="#contact" class="nav__link">Контакты и запись</a></li>
-    </ul>
-</nav>
 
-<div class="contacts">
+<header class="header">
+    <div class="header__container">
+        <a href="#" class="logo">
+            <span class="logo__beauty">Бьюти</span>
+            <span class="logo__lime">Лайм</span>
+            <span class="logo__subtitle">салон красоты</span>
+        </a>
+        <nav class="nav">
+            <ul class="nav__list">
+                <li class="nav__item"><a href="#uslugi" class="nav__link">Услуги</a></li>
+                <li class="nav__item"><a href="#price" class="nav__link">Прайс</a></li>
+                <li class="nav__item"><a href="#contact" class="nav__link">Контакты и запись</a></li>
+            </ul>
+        </nav>
+        <div class="contacts">
             <div class="contacts__phone">Телефон: +7 (928) 109-24-29</div>
             <div class="contacts__city">Ростов-на-Дону</div>
         </div>
         <button id="themeToggle" class="theme-toggle">🌙 Тёмная тема</button>
+    </div>
+</header>
 
+<main>
+    <div id="uslugi" class="services">
+        <h2 class="services__title">Услуги</h2>
+    </div>
+
+    <div class="services__row">
+        <div class="services__image">
+            <img src="img/cosmmask.png" alt="Косметические маски">
         </div>
-    </header> 
+        <div class="services__text">
+            <h3 class="services__name">Косметические маски</h3>
+            <p class="services__desc">У нас имеется большой выбор осветляющих, увлажняющих, а также очищающих косметических масок, которые мы нанесем на лицо, шею и зону декольте.</p>
+            <a href="#masks-price" class="services__btn">Узнать цены</a>
+        </div>
+    </div>
 
-    <main>
-        <section class="services">
-<div id="uslugi" class="uslugi">
-    <h2 class="services__title">Услуги</h2>
-</div>
-        <div class="services__row">
-            <div class="services__image">
-                <img src="img/cosmmask.png" alt="Косметические маски">
-            </div>
-            <div class="services__text">
-                <h3 class="services__name">Косметические маски</h3>
-                <p class="services__desc">У нас имеется большой выбор осветляющих, увлажняющих, а также очищающих косметических масок, которые мы нанесем на лицо, шею и зону декольте.</p>
-                <a href="#masks-price" class="services__btn">Узнать цены</a>
-            </div>
+    <div class="services__wrapper">
+        <div class="services__content">
+            <h3 class="services__title-left">Уходовые косметические услуги</h3>
+            <p class="services__desc-left">Предоставляем выбор более 10 косметических услуг, благодаря которым ваша кожа станет матовой, нежной и чистой.</p>
+            <a href="#care-price" class="services__button">Узнать цены</a>
+        </div>
+        <div class="services__photo">
+            <img src="img/uhod.png" alt="Уходовые услуги">
+        </div>
+    </div>
+
+    <div class="services__row-third">
+        <div class="services__image-third">
+            <img src="img/resnitsi.png" alt="реснички" class="services__img-third">
+        </div>
+        <div class="services__text-third">
+            <h3 class="services__name-third">Окраска и коррекция бровей</h3>
+            <p class="services__desc-third">Помимо бровей, Вы также можете выбрать различные услуги по уходу за ресницами.</p>
+            <a href="#brovi" class="services__btn-third">Узнать цены</a>
+        </div>
+    </div>
+
+    <div class="info-center">
+        <h2 class="info-center__title">Дополнительная информация</h2>
+    </div>
+
+    <div class="cards">
+        <div class="card">
+            <div class="card__overlay"></div>
+            <img src="img/massage.png" alt="Массаж" class="card__image">
+            <p class="card__text">Предлагаем выбор из более чем 13 видов массажа</p>
+        </div>
+        <div class="card">
+            <div class="card__overlay"></div>
+            <img src="img/oil.png" alt="Сервис" class="card__image">
+            <p class="card__text">Высокий уровень сервиса</p>
+        </div>
+        <div class="card">
+            <div class="card__overlay"></div>
+            <img src="img/instr.png" alt="Материалы" class="card__image">
+            <p class="card__text">Качественные материалы</p>
+        </div>
+    </div>
+
+    <div id="price" class="price">
+        <h2 class="price__title">Прайс услуг</h2>
+
+        <div style="height: 1px;"></div>
+        <div id="masks-price" style="position: relative; top: -90px; visibility: hidden;"></div>
+
+        <div class="price__table">
+            <div class="price__row"><div class="price__cell">Косметическая маска осветляющая</div><div class="price__cell">1 000 ₽</div></div>
+            <div class="price__row"><div class="price__cell">Альгинатная косметическая маска</div><div class="price__cell">1 800 ₽</div></div>
+            <div class="price__row"><div class="price__cell">Тканевая косметическая маска</div><div class="price__cell">1 000 ₽</div></div>
+            <div class="price__row"><div class="price__cell">Маска для волос</div><div class="price__cell">2 000 ₽</div></div>
         </div>
 
-        <div class="services__wrapper">
-    <div class="services__content">
-        <h3 class="services__title-left">Уходовые косметические услуги</h3>
-        <p class="services__text">Предоставляем выбор более 10 косметических услуг, благодаря которым ваша кожа станет матовой, нежной и чистой.</p>
-        <a href="#care-price" class="services__button">Узнать цены</a>
-    </div>
-    <div class="services__photo">
-        <img src="img/uhod.png" alt="Уходовые услуги">
-    </div>
-</div>
+        <div style="height: 1px;"></div>
+        <div id="care-price" style="position: relative; top: -90px; visibility: hidden;"></div>
 
-<div class="services__row-third">
-    <div class="services__image-third">
-        <img src="img/resnitsi.png" alt="реснички" class="services__img-third">
-    </div>
-    <div class="services__text-third">
-        <h3 class="services__name-third">Окраска и коррекция бровей</h3>
-        <p class="services__desc-third">Помимо бровей, Вы также можете выбрать различные услуги по уходу за ресницами.</p>
-        <a href="#brovi" class="services__btn-third">Узнать цены</a>
-    </div>
-</div>
+        <div class="price__table">
+            <div class="price__row"><div class="price__cell">Косметическая услуга омоложения кожи</div><div class="price__cell">3 500 ₽</div></div>
+            <div class="price__row"><div class="price__cell">"Королевский выход" услуга для ивент-мероприятий</div><div class="price__cell">4 500 ₽</div></div>
+            <div class="price__row"><div class="price__cell">Подтяжка кожи</div><div class="price__cell">3 000 ₽</div></div>
+            <div class="price__row"><div class="price__cell">"Парафино-ревитализация" услуга для нежности кожи</div><div class="price__cell">2 000 ₽</div></div>
+            <div class="price__row"><div class="price__cell">"Патчи"</div><div class="price__cell">500 ₽</div></div>
+            <div class="price__row"><div class="price__cell">"Пилинг-скатка", быстрое очищение кожи</div><div class="price__cell">1 400 ₽</div></div>
+        </div>
 
-<div class="info-center">
-    <h2 class="info-center__title">Дополнительная информация</h2>
-</div>
+        <div style="height: 1px;"></div>
+        <div id="brovi" style="position: relative; top: -90px; visibility: hidden;"></div>
 
-<div class="cards">
-    <div class="card">
-        <div class="card__overlay"></div>
-        <img src="img/massage.png" alt="Массаж" class="card__image">
-        <p class="card__text">Предлагаем выбор из более чем 13 видов массажа</p>
-    </div>
-    <div class="card">
-        <div class="card__overlay"></div>
-        <img src="img/oil.png" alt="Сервис" class="card__image">
-        <p class="card__text">Высокий уровень сервиса</p>
-    </div>
-    <div class="card">
-        <div class="card__overlay"></div>
-        <img src="img/instr.png" alt="Материалы" class="card__image">
-        <p class="card__text">Качественные материалы</p>
-    </div>
-</div>
+        <div class="price__table">
+            <div class="price__row"><div class="price__cell">"Переводные брови"</div><div class="price__cell">1 500 ₽</div></div>
+            <div class="price__row"><div class="price__cell">Коррекция бровей</div><div class="price__cell">600 ₽</div></div>
+            <div class="price__row"><div class="price__cell">Ламинирование бровей</div><div class="price__cell">1 600 ₽</div></div>
+            <div class="price__row"><div class="price__cell">Окраска бровей</div><div class="price__cell">600 ₽</div></div>
+            <div class="price__row"><div class="price__cell">Окраска ресниц</div><div class="price__cell">600 ₽</div></div>
+        </div>
 
-<div id="price" class="price">
-    <h2 class="price__title">Прайс услуг</h2>
-    <h3 class="price__subtitle">Косметические маски</h3>
-
-    <div id="masks-price" class="price__table">
-    <div class="price__row">
-        <div class="price__cell">Косметическая маска осветляющая</div>
-        <div class="price__cell">1 000 ₽</div>
-    </div>
-    <div class="price__row">
-        <div class="price__cell">Альгинатная косметическая маска</div>
-        <div class="price__cell">1 800 ₽</div>
-    </div>
-    <div class="price__row">
-        <div class="price__cell">Тканевая косметическая маска</div>
-        <div class="price__cell">1 000 ₽</div>
-    </div>
-    <div class="price__row">
-        <div class="price__cell">Маска для волос</div>
-        <div class="price__cell">2 000 ₽</div>
+        <div class="price__table">
+            <div class="price__row"><div class="price__cell">Массаж шейно-воротниковой зоны</div><div class="price__cell">1 500 ₽</div></div>
+            <div class="price__row"><div class="price__cell">Косметический массаж головы</div><div class="price__cell">2 000 ₽</div></div>
+            <div class="price__row"><div class="price__cell">Массаж головы (лица, шеи и зоны декольте)</div><div class="price__cell">1 800 ₽</div></div>
+            <div class="price__row"><div class="price__cell">Общий массаж тела</div><div class="price__cell">2 000 ₽</div></div>
+        </div>
     </div>
 
-    <h3 id="care-price" class="price__subtitle2">Косметические услуги уходовые</h3>
-
-<div class="price__table2">
-    <div class="price__row">
-        <div class="price__cell">Косметическая услуга омоложения кожи</div>
-        <div class="price__cell">3 500 ₽</div>
-    </div>
-    <div class="price__row">
-        <div class="price__cell">"Королевский выход" услуга для ивент-мероприятий</div>
-        <div class="price__cell">4 500 ₽</div>
-    </div>
-    <div class="price__row">
-        <div class="price__cell">Подтяжка кожи</div>
-        <div class="price__cell">3 000 ₽</div>
-    </div>
-    <div class="price__row">
-        <div class="price__cell">"Парафино-ревитализация" услуга для нежности кожи</div>
-        <div class="price__cell">2 000 ₽</div>
-    </div>
-    <div class="price__row">
-        <div class="price__cell">"Патчи"</div>
-        <div class="price__cell">500 ₽</div>
-    </div>
-    <div class="price__row">
-        <div class="price__cell">"Пилинг-скатка", быстрое очищение кожи</div>
-        <div class="price__cell">1 400 ₽</div>
-    </div>
-</div>
-
-        <h3 id="brovi" class="price__subtitle3">Окраска и коррекция бровей и ресниц</h3>
-
-<div class="price__table2">
-    <div class="price__row">
-        <div class="price__cell">"Переводные брови"</div>
-        <div class="price__cell">1 500 ₽</div>
-    </div>
-    <div class="price__row">
-        <div class="price__cell">Коррекция бровей</div>
-        <div class="price__cell">600 ₽</div>
-    </div>
-    <div class="price__row">
-        <div class="price__cell">Ламинирование бровей</div>
-        <div class="price__cell">1 600 ₽</div>
-    </div>
-    <div class="price__row">
-        <div class="price__cell">Окраска бровей</div>
-        <div class="price__cell">600 ₽</div>
-    </div>
-    <div class="price__row">
-        <div class="price__cell">Окраска ресниц</div>
-        <div class="price__cell">600 ₽</div>
-    </div>
-</div>      
-
-        <h3 class="price__subtitle3">Массаж</h3>
-
-<div class="price__table2">
-    <div class="price__row">
-        <div class="price__cell">Массаж шейно-воротниковой зоны</div>
-        <div class="price__cell">1 500 ₽</div>
-    </div>
-    <div class="price__row">
-        <div class="price__cell">Косметический массаж головы</div>
-        <div class="price__cell">2 000 ₽</div>
-    </div>
-    <div class="price__row">
-        <div class="price__cell">Массаж головы (лица, шеи и зоны декольте)</div>
-        <div class="price__cell">1 800 ₽</div>
-    </div>
-    <div class="price__row">
-        <div class="price__cell">Общий массаж тела</div>
-        <div class="price__cell">2 000 ₽</div>
-    </div>
-</div>
-
-</div>
-</div>
-
-<div id="contact" class="contact">
-    <h2 class="contact__title">Записаться на услуги</h2>
-    <div class="contact__container">
-        <div class="contact__map">
-    <iframe 
-        src="https://yandex.ru/map-widget/v1/?ll=39.628875%2C47.231057&mode=search&ol=geo&ouri=ymapsbm1%3A%2F%2Fgeo%3Fdata%3DCgg1NzI3MjE4OBJD0KDQvtGB0YHQuNGPLCDQoNC-0YHRgtC-0LIt0L3QsC3QlNC-0L3Rgywg0YPQu9C40YbQsCDQl9C-0YDQs9C1LCAzOSIKDcCDHkIVoew8Qg%2C%2C&z=18.24" 
-        width="100%" 
-        height="300" 
-        frameborder="0" 
-        allowfullscreen="true" 
-        style="border:0; border-radius: 16px;">
-    </iframe>
-</div>
-        <div class="contact__info">
-            <p class="contact__address">Адрес: ул. Зорге 39</p>
-            <div class="contact__block">
-                <h4 class="contact__subtitle">Контакты:</h4>
-                <p class="contact__phone">Телефон для записи на услуги:<br>+7 (928) 109-24-29</p>
-                <p class="contact__social">Пишите нам напрямую в соцсети по этому номеру:<br>+7 (928) 109-24-29</p>
+    <div id="contact" class="contact">
+        <h2 class="contact__title">Записаться на услуги</h2>
+        <div class="contact__container">
+            <div class="contact__map">
+                <iframe src="https://yandex.ru/map-widget/v1/?ll=39.628875%2C47.231057&mode=search&ol=geo&ouri=ymapsbm1%3A%2F%2Fgeo%3Fdata%3DCgg1NzI3MjE4OBJD0KDQvtGB0YHQuNGPLCDQoNC-0YHRgtC-0LIt0L3QsC3QlNC-0L3Rgywg0YPQu9C40YbQsCDQl9C-0YDQs9C1LCAzOSIKDcCDHkIVoew8Qg%2C%2C&z=18.24" width="100%" height="300" frameborder="0" allowfullscreen="true" style="border:0; border-radius: 16px;"></iframe>
             </div>
-            <div class="contact__block">
-                <h4 class="contact__subtitle">Время работы:</h4>
-                <p class="contact__time">10:00 — 20:00</p>
+            <div class="contact__form">
+                <h3 class="contact__form-title">Отправить заявку</h3>
+                <form id="contactForm" class="form">
+                    <input type="text" name="from_name" placeholder="Ваше имя" required class="form__input">
+                    <input type="email" name="from_email" placeholder="Ваш Email" required class="form__input">
+                    <input type="tel" name="from_phone" placeholder="Ваш телефон" class="form__input">
+                    <textarea name="message" placeholder="Ваше сообщение" rows="4" required class="form__textarea"></textarea>
+                    <button type="submit" class="form__button">Отправить заявку</button>
+                </form>
+                <div id="formStatus" class="form__status"></div>
+            </div>
+            <div class="contact__info">
+                <p class="contact__address">Адрес: ул. Зорге 39</p>
+                <div class="contact__block">
+                    <h4 class="contact__subtitle">Контакты:</h4>
+                    <p class="contact__phone">Телефон для записи на услуги:<br>+7 (928) 109-24-29</p>
+                    <p class="contact__social">Пишите нам напрямую в соцсети по этому номеру:<br>+7 (928) 109-24-29</p>
+                </div>
+                <div class="contact__block">
+                    <h4 class="contact__subtitle">Время работы:</h4>
+                    <p class="contact__time">10:00 — 20:00</p>
+                </div>
             </div>
         </div>
     </div>
-</div>
-
-        </section>
-
-    </main>  
+</main>
 
 <footer class="footer">
     <div class="footer__container">

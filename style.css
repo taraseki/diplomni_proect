@@ -41,7 +41,7 @@ body {
     flex-direction: column;
     align-items: flex-start;
     gap: 2px;
-    text-decoration: none;  
+    text-decoration: none;
     line-height: 1.1;
     flex-shrink: 0;
     white-space: nowrap;
@@ -54,7 +54,6 @@ body {
     font-weight: 500;
     font-size: 24px;
     color: #0F2A1D;
-    margin-bottom: -1px;
 }
 
 .logo__lime {
@@ -62,13 +61,12 @@ body {
     font-weight: 700;
     font-size: 24px;
     color: #0F2A1D;
-    margin-bottom: -2px;
 }
 
 .logo__subtitle {
     font-family: 'Fira Code', 'Courier New', monospace;
     font-weight: 400;
-    font-size: 16px;
+    font-size: 14px;
     color: #0F2A1D;
     letter-spacing: 0.3px;
     opacity: 0.8;
@@ -112,22 +110,21 @@ body {
     margin-top: 2px;
 }
 
-/* ----- Адаптивность ----- */
-@media (max-width: 768px) {
-    .header__container {
-        height: 60px;
-        padding: 0 16px;
-    }
-    .logo__beauty,
-    .logo__lime {
-        font-size: 18px;
-    }
-    .nav__list {
-        gap: 16px;
-    }
-    .nav__link {
-        font-size: 14px;
-    }
+.theme-toggle {
+    background-color: #0F2A1D;
+    color: white;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 600;
+    font-size: 14px;
+    padding: 8px 16px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: opacity 0.2s;
+}
+
+.theme-toggle:hover {
+    opacity: 0.8;
 }
 
 .services {
@@ -163,18 +160,6 @@ body {
     height: auto;
     border-radius: 16px;
     display: block;
-}
-
-.services__text {
-    flex: 1;
-}
-
-.services__name {
-    font-family: 'Montserrat', sans-serif;
-    font-weight: 700;
-    font-size: 32px;
-    color: #0F2A1D;
-    margin: 0 0 16px 0;
 }
 
 .services__text {
@@ -242,10 +227,10 @@ body {
     font-weight: 700;
     font-size: 32px;
     color: #0F2A1D;
-    margin: 0 0 48px 0;
+    margin: 0 0 30px 0;
 }
 
-.services__text {
+.services__desc-left {
     font-family: 'Montserrat', sans-serif;
     font-weight: 400;
     font-size: 22px;
@@ -317,7 +302,7 @@ body {
     font-weight: 700;
     font-size: 32px;
     color: #0F2A1D;
-    margin: 0 0 8px 0;
+    margin: 0 0 16px 0;
 }
 
 .services__desc-third {
@@ -326,7 +311,7 @@ body {
     font-size: 22px;
     color: #0F2A1D;
     line-height: 1.5;
-    margin: 0 0 78px 0;
+    margin: 0;
     width: 100%;
 }
 
@@ -341,6 +326,7 @@ body {
     padding: 12px 24px;
     border-radius: 8px;
     align-self: flex-end;
+    margin-top: 20px;
 }
 
 .info-center {
@@ -354,7 +340,6 @@ body {
     font-weight: 400;
     font-size: 40px;
     color: #0F2A1D;
-    letter-spacing: 0.3px;
     opacity: 0.8;
 }
 
@@ -422,44 +407,20 @@ body {
     text-align: left;
 }
 
-.price__subtitle {
+.price__subtitle,
+.price__subtitle2,
+.price__subtitle3 {
     font-family: 'Montserrat', sans-serif;
     font-weight: 500;
     font-size: 32px;
     color: #0F2A1D;
     margin: 30px 0 0 0;
-    padding-left: 60px;
     text-align: left;
 }
 
-.price__subtitle2 {
-    font-family: 'Montserrat', sans-serif;
-    font-weight: 500;
-    font-size: 32px;
-    color: #0F2A1D;
-    margin: 30px 0 0 0;
-    padding-left: 0px;
-    text-align: left;
-}
-
-#uslugi, #price {
-    scroll-margin-top: 100px;
-}
-
-#contact {
-    scroll-margin-top: 80px;
-}
-
-.price__table {
-    margin-top: 30px;
-    padding-left: 60px;
-    padding-right: 60px;
-}
-
+.price__table,
 .price__table2 {
     margin-top: 30px;
-    padding-left: 0px;
-    padding-right: 0px;
 }
 
 .price__row {
@@ -481,28 +442,6 @@ body {
     font-weight: 600;
 }
 
-#masks-price {
-    scroll-margin-top: 150px;
-}
-
-#care-price {
-    scroll-margin-top: 100px;
-}
-
-#brovi {
-    scroll-margin-top: 100px;
-}
-
-.price__subtitle3 {
-    font-family: 'Montserrat', sans-serif;
-    font-weight: 500;
-    font-size: 32px;
-    color: #0F2A1D;
-    margin: 30px 0 0 0;
-    padding-left: 0px;
-    text-align: left;
-}
-
 .contact {
     padding-top: 20px;
 }
@@ -522,21 +461,83 @@ body {
     flex-direction: row;
     gap: 60px;
     margin-top: 40px;
-    padding-left: 60px;
-    padding-right: 60px;
-    align-items: flex-start;
+    flex-wrap: wrap;
 }
 
 .contact__map {
     flex-shrink: 0;
+    width: 100%;
+    max-width: 400px;
+    border-radius: 16px;
+    overflow: hidden;
 }
 
-.contact__map img {
-    width: 300px;
-    height: 200px;
-    object-fit: cover;
-    border-radius: 16px;
+.contact__map iframe {
+    width: 100%;
+    height: 300px;
     display: block;
+    border-radius: 16px;
+}
+
+.contact__form {
+    flex: 1;
+    min-width: 250px;
+}
+
+.contact__form-title {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 600;
+    font-size: 24px;
+    color: #0F2A1D;
+    margin-bottom: 20px;
+}
+
+.form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    width: 100%;
+}
+
+.form__input,
+.form__textarea {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 16px;
+    padding: 12px 16px;
+    border: 1px solid #D9D9D9;
+    border-radius: 8px;
+    outline: none;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.form__input:focus,
+.form__textarea:focus {
+    border-color: #0F2A1D;
+}
+
+.form__button {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 600;
+    font-size: 16px;
+    background-color: #0F2A1D;
+    color: #FFFFFF;
+    padding: 12px 24px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: opacity 0.2s;
+}
+
+.form__button:hover {
+    opacity: 0.8;
+}
+
+.form__status {
+    margin-top: 15px;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 14px;
+    word-wrap: break-word;
 }
 
 .contact__info {
@@ -545,6 +546,7 @@ body {
     flex-direction: column;
     align-items: flex-start;
     text-align: left;
+    min-width: 200px;
 }
 
 .contact__address {
@@ -572,7 +574,9 @@ body {
     text-align: left;
 }
 
-.contact__phone {
+.contact__phone,
+.contact__social,
+.contact__time {
     font-family: 'Montserrat', sans-serif;
     font-weight: 400;
     font-size: 18px;
@@ -583,23 +587,7 @@ body {
 }
 
 .contact__social {
-    font-family: 'Montserrat', sans-serif;
-    font-weight: 400;
-    font-size: 18px;
-    color: #0F2A1D;
-    line-height: 1.5;
-    margin: 10px 0 0 0;
-    text-align: left;
-}
-
-.contact__time {
-    font-family: 'Montserrat', sans-serif;
-    font-weight: 400;
-    font-size: 18px;
-    color: #0F2A1D;
-    line-height: 1.5;
-    margin: 0;
-    text-align: left;
+    margin-top: 10px;
 }
 
 .footer {
@@ -723,7 +711,6 @@ body {
 .dark-theme .contacts__phone,
 .dark-theme .contacts__city,
 .dark-theme .services__title,
-.dark-theme .services__text,
 .dark-theme .services__name,
 .dark-theme .services__desc,
 .dark-theme .services__title-left,
@@ -735,7 +722,6 @@ body {
 .dark-theme .price__subtitle,
 .dark-theme .price__subtitle2,
 .dark-theme .price__subtitle3,
-.dark-theme .price__subtitle-second,
 .dark-theme .price__cell,
 .dark-theme .contact__title,
 .dark-theme .contact__address,
@@ -743,6 +729,9 @@ body {
 .dark-theme .contact__phone,
 .dark-theme .contact__social,
 .dark-theme .contact__time,
+.dark-theme .contact__form-title,
+.dark-theme .form__input,
+.dark-theme .form__textarea,
 .dark-theme .footer__beauty,
 .dark-theme .footer__lime,
 .dark-theme .footer__subtitle,
@@ -764,7 +753,8 @@ body {
 
 .dark-theme .services__btn,
 .dark-theme .services__button,
-.dark-theme .services__btn-third {
+.dark-theme .services__btn-third,
+.dark-theme .form__button {
     background-color: #0F2A1D;
     color: #FFFFFF;
     border: 1px solid rgba(255, 255, 255, 0.3);
@@ -772,24 +762,8 @@ body {
 
 .dark-theme .services__btn:hover,
 .dark-theme .services__button:hover,
-.dark-theme .services__btn-third:hover {
-    opacity: 0.8;
-}
-
-.theme-toggle {
-    background-color: #0F2A1D;
-    color: white;
-    font-family: 'Montserrat', sans-serif;
-    font-weight: 600;
-    font-size: 14px;
-    padding: 8px 16px;
-    border: none;
-    border-radius: 8px;
-    cursor: pointer;
-    transition: opacity 0.2s;
-}
-
-.theme-toggle:hover {
+.dark-theme .services__btn-third:hover,
+.dark-theme .form__button:hover {
     opacity: 0.8;
 }
 
@@ -798,15 +772,411 @@ body {
     color: #0F2A1D;
 }
 
-.contact__map {
-    width: 100%;
-    max-width: 400px;
-    border-radius: 16px;
-    overflow: hidden;
+.dark-theme .form__input,
+.dark-theme .form__textarea {
+    background-color: #2a3a32;
+    border-color: rgba(255, 255, 255, 0.2);
 }
 
-.contact__map iframe {
-    width: 100%;
-    height: 300px;
-    display: block;
+#uslugi, #price, #contact, #masks-price, #care-price, #brovi {
+    scroll-margin-top: 100px;
+}
+
+@media (min-width: 1200px) {
+    .header__container,
+    .services__title,
+    .price__title,
+    .contact__title,
+    .services__row,
+    .services__wrapper,
+    .services__row-third,
+    .price__table,
+    .price__table2,
+    .contact__container,
+    .cards,
+    .info-center,
+    .footer__container {
+        max-width: 1200px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .services__title,
+    .price__title,
+    .contact__title,
+    .price__subtitle,
+    .price__subtitle2,
+    .price__subtitle3 {
+        padding-left: 0;
+    }
+
+    .services__row,
+    .services__wrapper,
+    .services__row-third,
+    .price__table,
+    .price__table2,
+    .contact__container,
+    .cards {
+        padding-left: 0;
+        padding-right: 0;
+    }
+}
+
+@media (max-width: 1024px) {
+    .header__container {
+        padding: 0 30px;
+    }
+
+    .nav__list {
+        gap: 40px;
+    }
+
+    .nav__link {
+        font-size: 18px;
+    }
+
+    .services__title,
+    .price__title,
+    .contact__title {
+        padding-left: 30px;
+        font-size: 36px;
+    }
+
+    .price__subtitle,
+    .price__subtitle2,
+    .price__subtitle3 {
+        padding-left: 30px;
+        font-size: 28px;
+    }
+
+    .services__row,
+    .services__wrapper,
+    .services__row-third {
+        padding-left: 30px;
+        padding-right: 30px;
+        gap: 40px;
+    }
+
+    .services__image,
+    .services__photo,
+    .services__image-third {
+        width: 400px;
+    }
+
+    .services__name,
+    .services__title-left,
+    .services__name-third {
+        font-size: 28px;
+    }
+
+    .services__desc,
+    .services__desc-left,
+    .services__desc-third {
+        font-size: 18px;
+    }
+
+    .price__table,
+    .price__table2 {
+        padding-left: 30px;
+        padding-right: 30px;
+    }
+
+    .price__cell {
+        font-size: 18px;
+    }
+
+    .cards {
+        padding-left: 30px;
+        padding-right: 30px;
+        gap: 30px;
+    }
+
+    .contact__container {
+        padding-left: 30px;
+        padding-right: 30px;
+        gap: 40px;
+    }
+
+    .footer__container {
+        padding: 0 30px;
+        gap: 30px;
+    }
+}
+
+@media (max-width: 768px) {
+    .header__container {
+        height: 60px;
+        padding: 0 16px;
+    }
+
+    .logo__beauty,
+    .logo__lime {
+        font-size: 18px;
+    }
+
+    .logo__subtitle {
+        font-size: 10px;
+    }
+
+    .nav__list {
+        gap: 12px;
+    }
+
+    .nav__link {
+        font-size: 11px;
+    }
+
+    .contacts__phone,
+    .contacts__city {
+        font-size: 10px;
+    }
+
+    .theme-toggle {
+        font-size: 10px;
+        padding: 4px 8px;
+    }
+
+    .services {
+        padding-top: 80px;
+    }
+
+    .services__title,
+    .price__title,
+    .contact__title {
+        padding-left: 16px;
+        font-size: 28px;
+    }
+
+    .price__subtitle,
+    .price__subtitle2,
+    .price__subtitle3 {
+        padding-left: 16px;
+        font-size: 24px;
+    }
+
+    .services__row,
+    .services__wrapper,
+    .services__row-third {
+        flex-direction: column;
+        padding-left: 16px;
+        padding-right: 16px;
+        gap: 30px;
+    }
+
+    .services__image,
+    .services__photo,
+    .services__image-third {
+        width: 100%;
+    }
+
+    .services__text,
+    .services__content,
+    .services__text-third {
+        width: 100%;
+    }
+
+    .services__name,
+    .services__title-left,
+    .services__name-third {
+        font-size: 24px;
+    }
+
+    .services__desc,
+    .services__desc-left,
+    .services__desc-third {
+        font-size: 16px;
+    }
+
+    .services__btn,
+    .services__btn-third,
+    .services__button {
+        align-self: flex-start;
+    }
+
+    .price {
+        margin-top: 0;
+    }
+
+    .price__table,
+    .price__table2 {
+        padding-left: 16px;
+        padding-right: 16px;
+    }
+
+    .price__row {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 8px;
+        padding: 12px 0;
+    }
+
+    .price__cell {
+        font-size: 16px;
+    }
+
+    .cards {
+        flex-direction: column;
+        align-items: center;
+        padding-left: 16px;
+        padding-right: 16px;
+        gap: 20px;
+    }
+
+    .card {
+        width: 100%;
+        max-width: 300px;
+    }
+
+    .info-center {
+        margin-top: 40px;
+        margin-bottom: 40px;
+    }
+
+    .info-center__title {
+        font-size: 24px;
+    }
+
+    .contact__container {
+        flex-direction: column;
+        padding-left: 16px;
+        padding-right: 16px;
+        gap: 30px;
+    }
+
+    .contact__map {
+        max-width: 100%;
+    }
+
+    .contact__form {
+        max-width: 100%;
+        min-width: 100%;
+    }
+
+    .footer__container {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        padding: 0 16px;
+        gap: 30px;
+    }
+
+    .footer__logo {
+        text-align: center;
+    }
+
+    .footer__nav {
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 20px;
+    }
+
+    .footer__contacts {
+        text-align: center;
+    }
+}
+
+@media (max-width: 480px) {
+    .services__title,
+    .price__title,
+    .contact__title {
+        font-size: 24px;
+    }
+
+    .price__subtitle,
+    .price__subtitle2,
+    .price__subtitle3 {
+        font-size: 20px;
+    }
+
+    .services__name,
+    .services__title-left,
+    .services__name-third {
+        font-size: 20px;
+    }
+
+    .services__desc,
+    .services__desc-left,
+    .services__desc-third {
+        font-size: 14px;
+    }
+
+    .price__cell {
+        font-size: 14px;
+    }
+
+    .card__text {
+        font-size: 18px;
+    }
+
+    .contact__subtitle {
+        font-size: 18px;
+    }
+
+    .contact__phone,
+    .contact__social,
+    .contact__time,
+    .contact__address {
+        font-size: 14px;
+    }
+
+    .footer__beauty,
+    .footer__lime {
+        font-size: 18px;
+    }
+
+    .footer__subtitle {
+        font-size: 10px;
+    }
+
+    .footer__link,
+    .footer__city,
+    .footer__phone {
+        font-size: 12px;
+    }
+
+    .footer__address {
+        font-size: 10px;
+    }
+}
+
+.price-heading {
+    padding-left: 60px;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 500;
+    font-size: 32px;
+    color: #0F2A1D;
+    margin: 30px 0 0 0;
+}
+
+@media (max-width: 1024px) {
+    .price-heading {
+        padding-left: 30px;
+        font-size: 28px;
+    }
+}
+
+@media (max-width: 768px) {
+    .price-heading {
+        padding-left: 16px;
+        font-size: 24px;
+    }
+}
+
+@media (min-width: 1200px) {
+    .price-heading {
+        padding-left: 0;
+    }
+}
+
+.dark-theme .price-heading {
+    color: #e0e0e0;
+}
+
+.price__subtitle,
+.price__subtitle2,
+.price__subtitle3,
+.price-heading,
+.price h3 {
+    display: none;
 }
